@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anchor</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="index.js">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
 </head>
 <body>
     <div class="wrap">
-    
 
         <header>
 	<div id="header__menu">
@@ -19,7 +22,7 @@
 				</div>
 				<label class="min--menu" for="min"></label>
 				<input type="checkbox" id="min">
-				<nav class="main__navigation">
+				<nav id="main__navigation">
 					<a href="#welcome_block" class="menu__link">About</a>
 					<a href="#section-why" class="menu__link">Functions</a>
 					<a href="#started_block" class="menu__link">Order</a>
@@ -113,6 +116,8 @@
         </div>
 	</div>
 </section>
+
+
         <section id="latest-projects-container">
     <div class="container_block">
         <div class="row-latest-projects">
@@ -281,6 +286,21 @@
 </section>
 
     </div>
+
+
+
+    <script>
+
+        // scroll to the anchor
+        $(document).ready(function(){
+            $("#main__navigation").on("click","a", function (event) {
+                event.preventDefault();
+                var id  = $(this).attr('href'),
+                top = $(id).offset().top;
+                $('body,html').animate({scrollTop: top}, 2000);
+            });
+        });
+    </script>
 
 </body>
 </html>
