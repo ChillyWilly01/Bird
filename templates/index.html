@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anchor</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="index.js">
+    <link rel="stylesheet" href="slick/slick.scss">
+    <link rel="stylesheet" href="slick/slick-theme.scss">
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="slick/slick.js"></script>
 
 </head>
 <body>
@@ -35,6 +37,22 @@
                 top = $(id).offset().top;
                 $('body,html').animate({scrollTop: top}, 2000);
             });
+        });
+
+        // hamburger-menu
+        $(function(){
+            var links = $('.slide__menu, .close_menu');
+            var menu = $('.m_main__navigation');
+
+            links.on('click', function(event) {
+                event.preventDefault();
+                menu.toggleClass('m_main__navigation__active');
+            });
+        });
+
+        // slick
+        $(document).ready(function() {
+            $('.slick').slick();
         });
     </script>
 

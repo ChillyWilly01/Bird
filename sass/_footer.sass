@@ -69,12 +69,13 @@
 	text-transform: uppercase
 
 .footer__about
-	background-image: url(img/your-image-here.png)
+	background-image: url('../img/your-image-here.png')
+	background-repeat: no-repeat
 	background-color: rgba(30,214,203,0.75)
 	position: relative
 	padding: 95px 0 125px 0
 	background-size: cover
-	background-position: 50% 50%
+	background-position: 50% 100%
 	+media(767)
        	padding: 50px 0 50px 0
 	.sub-title
@@ -122,9 +123,9 @@
 	padding: 0 60px
 
 .btn__prev
-	left: 0px
+	left: 5%
 .btn__next
-	right: 0px	
+	right: 5%
 
 
 .footer__contact
@@ -215,3 +216,5 @@
 		display: inline-block
 		color: $blue-color
 	
+.main_slick
+	max-width: 100px
