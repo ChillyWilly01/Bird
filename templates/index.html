@@ -50,6 +50,17 @@
             });
         });
 
+        $(document).ready(function(){
+            $(".m_main__navigation").on("click","a", function (event) {
+                event.preventDefault();
+                var id  = $(this).attr('href'),
+                    top = $(id).offset().top;
+                $('body,html').animate({scrollTop: top}, 2000);
+                $(".m_main__navigation").toggleClass('m_main__navigation__active');
+            });
+        });
+
+
         // slick
         $(document).ready(function() {
             $('.slick').slick();
