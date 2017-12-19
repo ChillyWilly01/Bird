@@ -9,13 +9,6 @@
   height: 80px
   background-image: url('../img/base.png')
 
-#min
-  display: none
-  position: absolute
-  top: 0
-  left: 0
-  &:checked + #main__navigation
-    visibility: visible
 
 .logo
   float: left
@@ -25,20 +18,6 @@
 .your__logo
   width: 100%
 
-.min--menu
-  position: absolute
-  background-image: url('../img/menu.png')
-  width: 20px
-  height: 20px
-  border: none
-  background-color: transparent
-  background-size: contain
-  background-repeat: no-repeat
-  display: none
-  top: 31px
-  left: 50px
-  cursor: pointer
-  z-index: 5
 
 #main__navigation
   display: inline-block
@@ -55,6 +34,25 @@
   padding: 0 10px 0 10px
   display: inline-block
   cursor: pointer
+  &:active
+    background-image: url('../img/selected.png')
+    color: #fff
+  &:hover
+    background-image: url('../img/selected.png')
+    -webkit-transition: .4s ease-out
+    -moz-transition: .4s ease-out
+    -o-transition: .4s ease-out
+    transition: .4s ease-out
+
+.m-menu
+  color: #6b848c
+  font-size: 12px
+  font-weight: 400
+  text-transform: uppercase
+  padding: 0 10px 10px
+  display: block
+  cursor: pointer
+  text-align: center
   &:active
     background-image: url('../img/selected.png')
     color: #fff
@@ -125,11 +123,14 @@
   font-size: 37px
   line-height: 70px
   text-transform: uppercase
-  background-color: #ffffff
+  background-color: #28363d
   margin: 0
   padding: 0
   transition: 0.2s
   transform: translateX(100%)
+  li
+    width: 100%
+
 
 .m_main__navigation__active
   transform: translateX(0%)
