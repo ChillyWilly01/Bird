@@ -18,7 +18,7 @@
 	&-link
 		position: relative
 		color: $white-color
-		font-size: 20px
+		font-size: 1.25rem
 		text-transform: uppercase
 		.icon
 			margin: -5px 0px 0 70px
@@ -55,14 +55,14 @@
        		padding: 50px 0 50px 0		
 		
 .count__strong
-	font-size: 30px
+	font-size: 1.875rem
 	color: $white-color
 	font-weight: 700
 	line-height: 34px
 	text-transform: uppercase
 
 .count__descr
-	font-size: 14px
+	font-size: 0.875rem
 	color: $grey-color
 	font-weight: 700
 	line-height: 36px
@@ -76,34 +76,56 @@
 	padding: 95px 0 125px 0
 	background-size: cover
 	background-position: 50% 100%
-	+media(767)
-       	padding: 50px 0 50px 0
-	.sub-title
-		color: $white-color
-	p
-		color: #1e292f
-		font-size: 18px
-		font-weight: 400
-		line-height: 36px
-		font-style: italic
-		width: 50%
-		margin: 0 auto
-		text-align: center
+
+.sub_title
+	color: $white-color
+	font-size: 1.5rem
+	font-weight: 700
+	line-height: 36px
+	text-align: center
+	text-transform: uppercase
+	margin: -5% 30%
+	position: absolute
+	+media(920)
+		margin: -6% 30%
+		+media(500)
+			margin: -10% 15%
+			+media(422)
+				margin-top: -15%
+
+.sub_text
+	position: absolute
+	color: #1e292f
+	font-size: 1.125rem
+	font-weight: 400
+	line-height: 36px
+	font-style: italic
+	margin: 0 21%
+	text-align: center
+	+media(979)
+		margin: 7% 15%
+		+media(407)
+			margin: 5% 10%
+
 .slidershow
 	max-width: 1000px
 	position: relative
 	margin: auto
 
-.content
+.mySlides
 	position: relative
 	z-index: 2
-	h2
-		font-size: 24px
-		font-weight: 700
-		line-height: 36px
-		text-align: center
-		text-transform: uppercase
-		margin-bottom: 75px
+	padding-bottom: 3%
+	display: none
+	+media(980)
+		padding-bottom: 15%
+		+media(570)
+			padding-bottom: 25%
+			+media(480)
+				padding-bottom: 35%
+				+media(407)
+					padding-bottom: 45%
+
 
 .prev, .next
 	position: absolute
@@ -113,8 +135,8 @@
 	padding: 16px
 	color: $white-color
 	font-weight: bold
-	font-size: 18px
-	transition: 0.6s ease
+	font-size: 1.125rem
+	transition: 0.6s ease-in
 	border-radius: 0 3px 3px 0
 
 .row
@@ -131,14 +153,15 @@
 	-webkit-animation-duration: 1.5s
 	animation-name: fade
 	animation-duration: 1.5s
+	animation-timing-function: ease-in
 
 	@-webkit-keyframes fade
-		from{opacity: 0.4}
-		to{opacity: 1}
+		from{opacity: .4;}
+		to{opacity: 1;}
 
 	@keyframes fade
-		from{opacity: 0.4}
-		to{opacity: 1}
+		from{opacity: .4;}
+		to{opacity: 1;}
 
 .footer__contact
 	background-size: cover
@@ -151,7 +174,7 @@
 	&-col
 		float: left
 		width: 33.333333%
-		font-size: 16px
+		font-size: 1rem
 		+media(767)
        		width: 50%
        		+media(480)
@@ -171,12 +194,10 @@
 		left: 15px;
 		+media(767)
        		left: 50%
-       		transform: translateX(-50%)	
-	
-
+       		transform: translateX(-50%)
 			
 .contact__descr
-	font-size: 14px
+	font-size: 0.875rem
 	font-weight: 400
 	line-height: 24px
 
@@ -216,7 +237,7 @@
 	padding: 25px 0
 	background-color: #1e292f
 	text-align: center
-	font-size: 14px
+	font-size: 0.875rem
 	font-weight: 600
 	line-height: 36px
 	text-transform: uppercase
